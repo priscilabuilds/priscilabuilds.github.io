@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación Principal -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <h1 class="logo">Mi Blog</h1>
+            <div class="main-sections" id="mainSections">
+                <button class="section-btn active" data-section="home">HOME</button>
+                <button class="section-btn" data-section="about">ABOUT ME</button>
+                <button class="section-btn" data-section="portfolio">PORTFOLIO</button>
+                <button class="section-btn" data-section="research">RESEARCH</button>
+                <button class="section-btn" data-section="wellness">WELLNESS</button>
+                <button class="section-btn" data-section="diy">DIY</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Filtros de Tags (aparecen según la sección) -->
+    <div class="tags-bar" id="tagsBar" style="display: none;">
+        <div class="tags-container">
+            <button class="tag-btn active" data-tag="all">TODOS</button>
+            <!-- Los tags se cargarán dinámicamente según la sección -->
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- HOME Section -->
+        <section id="section-home" class="content-section active">
+            <div class="hero">
+                <h2 class="hero-title">Bienvenido</h2>
+                <p class="hero-subtitle">Explora mis proyectos, investigaciones y descubrimientos</p>
+            </div>
+            
+            <div class="home-grid">
+                <div class="featured-posts" id="featuredPosts">
+                    <h3 class="section-heading">Últimas publicaciones</h3>
+                    <div class="posts-grid" id="homePostsGrid">
+                        <!-- Posts recientes se cargarán aquí -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME Section -->
+        <section id="section-about" class="content-section">
+            <div class="about-content">
+                <h2 class="page-title">Sobre Mí</h2>
+                <div class="about-text">
+                    <p>Escribe aquí tu biografía, intereses, experiencia, etc.</p>
+                    <p>Puedes editar este contenido directamente en el archivo <code>index.html</code> en la sección "ABOUT ME Section".</p>
+                    <p>Añade párrafos, imágenes, links, lo que necesites para presentarte al mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO Section -->
+        <section id="section-portfolio" class="content-section">
+            <div class="section-header">
+                <h2 class="page-title">Portfolio</h2>
+                <p class="page-subtitle">Mis proyectos y trabajos</p>
+            </div>
+            <div class="posts-grid" id="portfolioPosts">
+                <!-- Posts de portfolio se cargarán aquí -->
+            </div>
+            <div class="empty-state" id="emptyPortfolio" style="display: none;">
+                <p>No hay proyectos de portfolio todavía.</p>
+            </div>
+        </section>
+
+        <!-- RESEARCH Section -->
+        <section id="section-research" class="content-section">
+            <div class="section-header">
+                <h2 class="page-title">Research</h2>
+                <p class="page-subtitle">Investigaciones y análisis</p>
+            </div>
+            <div class="posts-grid" id="researchPosts">
+                <!-- Posts de research se cargarán aquí -->
+            </div>
+            <div class="empty-state" id="emptyResearch" style="display: none;">
+                <p>No hay publicaciones de investigación todavía.</p>
+            </div>
+        </section>
+
+        <!-- WELLNESS Section -->
+        <section id="section-wellness" class="content-section">
+            <div class="section-header">
+                <h2 class="page-title">Wellness</h2>
+                <p class="page-subtitle">Salud, bienestar y mindfulness</p>
+            </div>
+            <div class="posts-grid" id="wellnessPosts">
+                <!-- Posts de wellness se cargarán aquí -->
+            </div>
+            <div class="empty-state" id="emptyWellness" style="display: none;">
+                <p>No hay publicaciones de wellness todavía.</p>
+            </div>
+        </section>
+
+        <!-- DIY Section -->
+        <section id="section-diy" class="content-section">
+            <div class="section-header">
+                <h2 class="page-title">DIY</h2>
+                <p class="page-subtitle">Proyectos y tutoriales</p>
+            </div>
+            <div class="posts-grid" id="diyPosts">
+                <!-- Posts de DIY se cargarán aquí -->
+            </div>
+            <div class="empty-state" id="emptyDiy" style="display: none;">
+                <p>No hay proyectos DIY todavía.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mi Blog. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html>
